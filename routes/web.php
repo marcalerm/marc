@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RunsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('run', [RunsController::class, 'run']);
+Route::get('run', [RunsController::class, 'index']);
